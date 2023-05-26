@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Cấu hình JDBC -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/demo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1905</property>
+
+        <!-- Cấu hình dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Cấu hình show SQL -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Cấu hình cập nhật tự động -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Cấu hình format -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Cấu hình entity package -->
+        <mapping class="com.example.servlethibernate.User"/>
+
+    </session-factory>
+</hibernate-configuration>
